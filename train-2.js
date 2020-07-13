@@ -100,7 +100,6 @@ function Square(left_up, right_bottom) {
     this.width = right_bottom.x - left_up.x
     this.height = right_bottom.y - left_up.y
     this.points = [left_up, new THREE.Vector2(right_bottom.x, left_up.y), right_bottom, new THREE.Vector2(left_up.x, right_bottom.y), left_up]
-
     return this
 }
 
@@ -149,6 +148,17 @@ transform_points = function (points, transform_matrix) {
     return transformed_points
 }
 
+move_points = function (points, x, y) {
+    var transformed_points = []
+    for (var p of points) {
+        var p_copy = p.clone()
+        p_copy.add(new THREE.Vector2(x, y))
+        transformed_points.push(p_copy)
+    }
+    return transformed_points
+}
+
+
 var square = null;
 var extended_points = null;
 var transformed_square_points = null;
@@ -168,9 +178,14 @@ give_a_test = function () {
     transformed_square_points = transform_points(square.points, transform_matrix)
     transformed_extend_points = transform_points(extended_points, transform_matrix)
 
+
+    square.points = move_points(square.points, -square.left_up.x, -square.left_up.y)
+    extended_points = move_points(extended_points, -square.left_up.x, -square.left_up.y)
+
     show_lines_by_points(extended_points, endpoint_1_color);
     show_lines_by_points(square.points, endpoint_1_color);
     show_lines_by_points(transformed_square_points, endpoint_2_color);
+    show_lines_by_points([transformed_square_points[0], transformed_square_points[1]], endpoint_1_color);
 }
 
 var paint_points = []
@@ -200,6 +215,7 @@ window_onkeypress = function (e) {
         show_lines_by_points(extended_points, endpoint_1_color);
         show_lines_by_points(square.points, endpoint_1_color);
         show_lines_by_points(transformed_square_points, endpoint_2_color);
+        show_lines_by_points([transformed_square_points[0], transformed_square_points[1]], endpoint_1_color);
     }
 }
 init_canvas();
@@ -213,3 +229,16 @@ window.onkeypress = window_onkeypress;
 window.onresize = init_canvas;
 
 give_a_test()
+
+var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+httpRequest.open('GET', 'http://www.mutemoon.com/ssr', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+/**
+ * 获取数据后的处理程序
+ */
+httpRequest.onreadystatechange = function () {
+    if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+        var json = httpRequest.responseText;//获取到json字符串，还需解析
+        console.log(json);
+    }
+};

@@ -231,7 +231,7 @@ window.onresize = init_canvas;
 give_a_test()
 
 var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
-httpRequest.open('GET', 'http://www.mutemoon.com/ssr', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
+httpRequest.open('GET', 'https://www.mutemoon.com/ssr', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
 httpRequest.send();//第三步：发送请求  将请求参数写在URL中
 /**
  * 获取数据后的处理程序

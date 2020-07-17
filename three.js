@@ -5599,7 +5599,6 @@
 				}
 
 				var direction = line.delta( v1 );
-
 				var denominator = this.normal.dot( direction );
 
 				if ( denominator === 0 ) {

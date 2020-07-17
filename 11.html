@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>第一个three.js文件_WebGL三维场景</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      /* 隐藏body窗口区域滚动条 */
+    }
+  </style>
+  <!--引入three.js三维引擎-->
+  <script src="http://www.yanhuangxueyuan.com/versions/threejsR92/build/three.js"></script>
+  <!-- <script src="./three.js"></script> -->
+  <!-- <script src="http://www.yanhuangxueyuan.com/threejs/build/three.js"></script> -->
+</head>
+
+<body>
+  <script>
+    /**
+     * 创建场景对象Scene
+     */
+    var scene = new THREE.Scene();
+
+    scene.add(new THREE.AxesHelper(1000))
+    var k = 1;
+    var s = 200;
+    var camera = new THREE.OrthographicCamera(-s * k, s * k, s, -s, 1, 1000);
+    camera.position.set(0, 300, 0); //设置相机位置
+    camera.lookAt(0,0,0); //设置相机方向(指向的场景对象)
+    /**
+     * 创建渲染器对象
+     */
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize(300, 300);//设置渲染区域尺寸
+    renderer.setClearColor(0xb9d3ff, 1); //设置背景颜色
+    document.body.appendChild(renderer.domElement); //body元素中插入canvas对象
+    //执行渲染操作   指定场景、相机作为参数
+    renderer.render(scene, camera);
+  </script>
+</body>
+</html>

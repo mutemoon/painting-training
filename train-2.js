@@ -178,7 +178,7 @@ give_a_test = function () {
     transformed_square_points = transform_points(square.points, transform_matrix)
     transformed_extend_points = transform_points(extended_points, transform_matrix)
 
-
+    
     square.points = move_points(square.points, -square.left_up.x, -square.left_up.y)
     extended_points = move_points(extended_points, -square.left_up.x, -square.left_up.y)
 
@@ -229,16 +229,3 @@ window.onkeypress = window_onkeypress;
 window.onresize = init_canvas;
 
 give_a_test()
-
-var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
-httpRequest.open('GET', 'https://www.mutemoon.com/ssr', true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
-httpRequest.send();//第三步：发送请求  将请求参数写在URL中
-/**
- * 获取数据后的处理程序
- */
-httpRequest.onreadystatechange = function () {
-    if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-        var json = httpRequest.responseText;//获取到json字符串，还需解析
-        console.log(json);
-    }
-};

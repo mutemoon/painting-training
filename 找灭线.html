@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>找灭线</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+    <!--引入three.js三维引擎-->
+    <script src="./three.js"></script>
+    <script src="./gui.js"></script>
+</head>
+<body>
+    <script src="./train-1.js"></script>
+
+<script>
+function init_ui() {
+    params = {
+        说明: "找到两条红色线的交点所在的灭线，并画一条线使之与蓝色线的交点落在灭线上。",
+    };
+    gui = new GUI({width: width});
+    gui.add(params, "说明");
+    gui.open();
+
+    gui.domElement.style.margin = 0
+    gui.domElement.getElementsByTagName("input")[0].disabled = true
+    gui.domElement.children[2].remove()
+}
+
+init_ui();
+</script>
+</body>
+
+
+
+</html>

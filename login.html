@@ -85,10 +85,10 @@
 
 <body style="">
     <div class="bg" style="position: absolute;height: 100%;width: 100%;z-index: -1;"></div>
-    <div >
+    <div id="app">
 
     </div>
-    <div  class="row">
+    <div class="row">
         <div style="background-color: rgba(0, 0, 25,0.5);border-right: 1px solid rgb(255, 200, 126);">
             <div class="column center" style="width:200px;">
                 <div class="column center">
@@ -129,7 +129,7 @@
             <div id="c" class="row center"></div>
         </div>
         <div class="column" style="background-color: rgba(0, 0, 25,0.5);border-left: 1px solid rgb(255, 200, 126);">
-            <div id="app" class="column center" style="width:200px;">
+            <div class="column center" style="width:200px;">
                 <div class="row around" style="padding-top: 20px; padding-bottom: 20px;">
                     <img src="/banner-patter.png" style="width:50px;height:50px;border-radius: 100%; border:1px solid rgb(255, 200, 126);user-select:none;"></img>
                     <div class="column center">
@@ -138,7 +138,7 @@
 
                 </div>
                 <a class="text navigation top-border bottom-border" onclick="">得分情况</a>
-                <a class="text navigation">本次得分：{{ score }}</a>
+                <a class="text navigation">本次得分：98.7</a>
                 <a class="text navigation mini-font">近期平均分：98.7</a>
                 <a class="text navigation mini-font">历史平均分：86.7</a>
                 <a class="text navigation can-click mini-font">得分详情</a>
@@ -175,14 +175,13 @@
             }
         }
 
-        app = new Vue({
+        new Vue({
             el: '#app',
             data: {
                 user: {
                     name: "赵浩然",
                     level: "菜鸟入门"
-                },
-                score: 0,
+                }
             }
         })
     </script>

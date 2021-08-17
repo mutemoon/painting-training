@@ -8,13 +8,9 @@
     body {
       margin: 0;
       overflow: hidden;
-      /* 隐藏body窗口区域滚动条 */
     }
   </style>
-  <!--引入three.js三维引擎-->
   <script src="http://www.yanhuangxueyuan.com/versions/threejsR92/build/three.js"></script>
-  <!-- <script src="./three.js"></script> -->
-  <!-- <script src="http://www.yanhuangxueyuan.com/threejs/build/three.js"></script> -->
 </head>
 
 <body>
@@ -37,8 +33,12 @@
     renderer.setSize(300, 300);//设置渲染区域尺寸
     renderer.setClearColor(0xb9d3ff, 1); //设置背景颜色
     document.body.appendChild(renderer.domElement); //body元素中插入canvas对象
+    window.onresize = function (e)
+    {
+      renderer.setSize(e.target.innerWidth, e.target.innerHeight)
+    }
     //执行渲染操作   指定场景、相机作为参数
-    renderer.render(scene, camera);
+     renderer.render(scene, camera);
   </script>
 </body>
 </html>

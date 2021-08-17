@@ -1,0 +1,17 @@
+Vue.component('main-banner', { data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<div style="display:flex;justify-content:center"><a style=\'font-size: 80px;font-family: "Microsoft YaHei", 微软雅黑, -apple-system, BlinkMacSystemFont, "PingFang SC", Helvetica, Tahoma, Arial, sans-serif;color: rgb(253, 201, 201);filter: drop-shadow(rgba(255, 0, 124, 0.68) 0px 6px 99px);\'><span>绘画训练</span></a></div>'
+ })
+
+
+Vue.component('main-menu', { data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<div style="display:flex;justify-content:center;"><div style=\'font-size: 80px;font-family: "Microsoft YaHei", 微软雅黑, -apple-system, BlinkMacSystemFont, "PingFang SC", Helvetica, Tahoma, Arial, sans-serif;color: rgb(253, 201, 201);filter: drop-shadow(rgba(255, 0, 124, 0.68) 0px 6px 99px);\'><a>透视</a><a>渲染</a></div></div>'
+ })
+

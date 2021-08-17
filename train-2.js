@@ -3,6 +3,9 @@ var height = window.innerHeight; //窗口高度
 
 var scene = new THREE.Scene();
 var camera = new THREE.OrthographicCamera();;
+camera.position.set(width / 2, height / 2, -100);
+camera.lookAt(width / 2, height / 2, 0);
+camera.rotateZ(Math.PI)
 var renderer = new THREE.WebGLRenderer({
     antialias: true,
     // alpha: true
@@ -25,15 +28,10 @@ init_canvas = function () {
     renderer.setSize(width, height); // 重置渲染器输出画布canvas尺寸
     renderer.setClearColor(0xffffff, 1); //设置背景颜色
     // 重置相机投影的相关参数
-    var k = width / height;
-    var s = height / 2;
-    camera.left = -s * k;
-    camera.right = s * k;
-    camera.top = s;
-    camera.bottom = -s;
-    camera.position.set(width / 2, height / 2, -100);
-    camera.lookAt(width / 2, height / 2, 0);
-    camera.rotateZ(Math.PI)
+    camera.left = - width / 2;
+    camera.right = width / 2;
+    camera.top = height / 2;
+    camera.bottom = - height / 2;
     camera.updateProjectionMatrix();
 }
 

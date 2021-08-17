@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad776510-b4bc-4563-b5f5-ebd4ec5b7083" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/train-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/train-4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11.html" beforeDir="false" afterPath="$PROJECT_DIR$/11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/train-2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/截面变换.html" beforeDir="false" afterPath="$PROJECT_DIR$/截面变换.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/找灭线.html" beforeDir="false" afterPath="$PROJECT_DIR$/找灭线.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/明度计算.html" beforeDir="false" afterPath="$PROJECT_DIR$/明度计算.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +37,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605321535513</updated>
       <workItem from="1605321536871" duration="92000" />
+      <workItem from="1616913770238" duration="5000" />
     </task>
     <servers />
   </component>

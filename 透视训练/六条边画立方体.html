@@ -15,54 +15,53 @@
 			overflow: hidden;
 		}
 	</style>
-	<script src="./three.js"></script>
-	<script src="assets/scripts/axios.min.js"></script>
-	<script src="assets/scripts/vue.js"></script>
-	<script src="assets/scripts/vue-router.js"></script>
+	<script src="/./three.js"></script>
+	<script src="/assets/scripts/axios.min.js"></script>
+	<script src="/assets/scripts/vue.js"></script>
 
 	<!-- Main Styles -->
-	<link rel="stylesheet" href="assets/styles/style.min.css">
+	<link rel="stylesheet" href="/assets/styles/style.min.css">
 
 	<!-- Material Design Icon -->
-	<link rel="stylesheet" href="assets/fonts/material-design/css/materialdesignicons.css">
+	<link rel="stylesheet" href="/assets/fonts/material-design/css/materialdesignicons.css">
 
 	<!-- mCustomScrollbar -->
-	<link rel="stylesheet" href="assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
 
 	<!-- Waves Effect -->
-	<link rel="stylesheet" href="assets/plugin/waves/waves.min.css">
+	<link rel="stylesheet" href="/assets/plugin/waves/waves.min.css">
 
 	<!-- Sweet Alert -->
-	<link rel="stylesheet" href="assets/plugin/sweet-alert/sweetalert.css">
+	<link rel="stylesheet" href="/assets/plugin/sweet-alert/sweetalert.css">
 
 	<!-- Morris Chart -->
-	<link rel="stylesheet" href="assets/plugin/chart/morris/morris.css">
+	<link rel="stylesheet" href="/assets/plugin/chart/morris/morris.css">
 
 	<!-- FullCalendar -->
-	<link rel="stylesheet" href="assets/plugin/fullcalendar/fullcalendar.min.css">
-	<link rel="stylesheet" href="assets/plugin/fullcalendar/fullcalendar.print.css" media='print'>
+	<link rel="stylesheet" href="/assets/plugin/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" href="/assets/plugin/fullcalendar/fullcalendar.print.css" media='print'>
 
 	<!-- Dark Themes -->
-	<link rel="stylesheet" href="assets/styles/style-black.min.css">
+	<link rel="stylesheet" href="/assets/styles/style-black.min.css">
 </head>
 
 <body>
 	<div class="main-menu">
 		<header class="header">
-			<a href="index.html" class="logo"><i class="ico fa fa-pencil-square"></i>绘画训练</a>
+			<a href="/index.html" class="logo"><i class="ico fa fa-pencil-square"></i>绘画训练</a>
 			<button type="button" class="button-close fa fa-times js__menu_close"></button>
 			<div class="user">
-				<a href="#" class="avatar"><img src="assets/images/avatar-4.jpg" alt=""><span
+				<a href="/#" class="avatar"><img src="/assets/images/avatar-4.jpg" alt=""><span
 						class="status online"></span></a>
-				<h5 class="name"><a href="profile.html">{{ user.username }}</a></h5>
+				<h5 class="name"><a href="/profile.html">{{ user.name }}</a></h5>
 				<h5 class="position">{{ user.level }}</h5>
 				<!-- /.name -->
 				<div class="control-wrap js__drop_down">
 					<i class="fa fa-caret-down js__drop_down_button"></i>
 					<div class="control-list">
-						<div class="control-item"><a href="profile.html"><i class="fa fa-user"></i> Profile</a></div>
-						<div class="control-item"><a href="#"><i class="fa fa-gear"></i> Settings</a></div>
-						<div class="control-item"><a href="#"><i class="fa fa-sign-out"></i> Log out</a></div>
+						<div class="control-item"><a href="/profile.html"><i class="fa fa-user"></i> Profile</a></div>
+						<div class="control-item"><a href="/#"><i class="fa fa-gear"></i> Settings</a></div>
+						<div class="control-item"><a href="/#"><i class="fa fa-sign-out"></i> Log out</a></div>
 					</div>
 					<!-- /.control-list -->
 				</div>
@@ -77,23 +76,20 @@
 				<!-- /.title -->
 				<ul class="menu js__accordion">
 					<li class="current active">
-						<a class="waves-effect js__control" href="#"><i
+						<a class="waves-effect js__control" href="/#"><i
 								class="menu-icon fa fa-cube"></i><span>明度计算</span><span
 								class="menu-arrow fa fa-angle-down"></span></a>
 						<ul class="sub-menu js__content">
-							<li><a class="S 0" href="#">单平面</a></li>
-							<li><a class="S 1" href="#">多平面</a></li>
-							<li><a class="S 2" href="#">单球体</a></li>
-							<li><a class="S 3" href="#">多球体</a></li>
-							<li><a class="S 4" href="#">单盒子</a></li>
-							<li><a class="S 5" href="#">多盒子</a></li>
-							<li class="current"><a class="S 6" href="#">球盒混合</a></li>
+							<li><a class="S 0" href="/#">单平面</a></li>
+							<li><a class="S 1" href="/#">多平面</a></li>
+							<li><a class="S 2" href="/#">单球体</a></li>
+							<li><a class="S 3" href="/#">多球体</a></li>
+							<li><a class="S 4" href="/#">单盒子</a></li>
+							<li><a class="S 5" href="/#">多盒子</a></li>
+							<li class="current"><a class="S 6" href="/#">球盒混合</a></li>
 						</ul>
 						<!-- /.sub-menu js__content -->
 				</ul>
-				<router-link to="/user">User</router-link>
-				<router-link to="/register">Register</router-link>
-				<router-view></router-view>
 			</div>
 			<!-- /.navigation -->
 		</div>
@@ -111,17 +107,17 @@
 		<!-- /.pull-left -->
 		<div class="pull-right">
 			<div class="ico-item">
-				<a href="#" class="ico-item mdi mdi-magnify js__toggle_open" data-target="#searchform-header"></a>
+				<a href="/#" class="ico-item mdi mdi-magnify js__toggle_open" data-target="#searchform-header"></a>
 				<form action="#" id="searchform-header" class="searchform js__toggle"><input type="search"
 						placeholder="Search..." class="input-search"><button class="mdi mdi-magnify button-search"
 						type="submit"></button></form>
 				<!-- /.searchform -->
 			</div>
 			<!-- /.ico-item -->
-			<a href="#" class="ico-item mdi mdi-email notice-alarm js__toggle_open" data-target="#message-popup"></a>
-			<a href="#" class="ico-item pulse"><span class="ico-item mdi mdi-bell notice-alarm js__toggle_open"
+			<a href="/#" class="ico-item mdi mdi-email notice-alarm js__toggle_open" data-target="#message-popup"></a>
+			<a href="/#" class="ico-item pulse"><span class="ico-item mdi mdi-bell notice-alarm js__toggle_open"
 					data-target="#notification-popup"></span></a>
-			<a href="#" class="ico-item mdi mdi-logout js__logout"></a>
+			<a href="/#" class="ico-item mdi mdi-logout js__logout"></a>
 		</div>
 		<!-- /.pull-right -->
 	</div>
@@ -133,23 +129,23 @@
 		<div class="content">
 			<ul class="notice-list">
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-sm-1.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-sm-1.jpg" alt=""></span>
 						<span class="name">John Doe</span>
 						<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
 						<span class="time">10 min</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-sm-2.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-sm-2.jpg" alt=""></span>
 						<span class="name">Anna William</span>
 						<span class="desc">Like your post: “Facebook Messenger”</span>
 						<span class="time">15 min</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/#">
 						<span class="avatar bg-warning"><i class="fa fa-warning"></i></span>
 						<span class="name">Update Status</span>
 						<span class="desc">Failed to get available update data. To ensure the please contact us.</span>
@@ -157,31 +153,31 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-1.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-1.jpg" alt=""></span>
 						<span class="name">Jennifer</span>
 						<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
 						<span class="time">45 min</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-sm-6.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-sm-6.jpg" alt=""></span>
 						<span class="name">Michael Zenaty</span>
 						<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
 						<span class="time">50 min</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-sm-4.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-sm-4.jpg" alt=""></span>
 						<span class="name">Simon</span>
 						<span class="desc">Like your post: “Facebook Messenger”</span>
 						<span class="time">1 hour</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/#">
 						<span class="avatar bg-violet"><i class="fa fa-flag"></i></span>
 						<span class="name">Account Contact Change</span>
 						<span class="desc">A contact detail associated with your account has been changed.</span>
@@ -189,24 +185,24 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-sm-7.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-sm-7.jpg" alt=""></span>
 						<span class="name">Helen 987</span>
 						<span class="desc">Like your post: “Facebook Messenger”</span>
 						<span class="time">Yesterday</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-2.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-2.jpg" alt=""></span>
 						<span class="name">Denise Jenny</span>
 						<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
 						<span class="time">Oct, 28</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-sm-8.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-sm-8.jpg" alt=""></span>
 						<span class="name">Thomas William</span>
 						<span class="desc">Like your post: “Facebook Messenger”</span>
 						<span class="time">Oct, 27</span>
@@ -214,20 +210,20 @@
 				</li>
 			</ul>
 			<!-- /.notice-list -->
-			<a href="#" class="notice-read-more">See more messages <i class="fa fa-angle-down"></i></a>
+			<a href="/#" class="notice-read-more">See more messages <i class="fa fa-angle-down"></i></a>
 		</div>
 		<!-- /.content -->
 	</div>
 	<!-- /#notification-popup -->
 
 	<div id="message-popup" class="notice-popup js__toggle" data-space="75">
-		<h2 class="popup-title">Recent Messages<a href="#" class="pull-right text-danger">New message</a></h2>
+		<h2 class="popup-title">Recent Messages<a href="/#" class="pull-right text-danger">New message</a></h2>
 		<!-- /.popup-title -->
 		<div class="content">
 			<ul class="notice-list">
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-sm-1.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-sm-1.jpg" alt=""></span>
 						<span class="name">John Doe</span>
 						<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span>
@@ -235,8 +231,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-sm-3.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-sm-3.jpg" alt=""></span>
 						<span class="name">Harry Halen</span>
 						<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span>
@@ -244,8 +240,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-sm-4.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-sm-4.jpg" alt=""></span>
 						<span class="name">Thomas Taylor</span>
 						<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span>
@@ -253,8 +249,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-1.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-1.jpg" alt=""></span>
 						<span class="name">Jennifer</span>
 						<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span>
@@ -262,8 +258,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-sm-5.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-sm-5.jpg" alt=""></span>
 						<span class="name">Helen Candy</span>
 						<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span>
@@ -271,8 +267,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-2.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-2.jpg" alt=""></span>
 						<span class="name">Anna Cavan</span>
 						<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span>
@@ -280,7 +276,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/#">
 						<span class="avatar bg-success"><i class="fa fa-user"></i></span>
 						<span class="name">Jenny Betty</span>
 						<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere
@@ -289,8 +285,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<span class="avatar"><img src="assets/images/avatar-5.jpg" alt=""></span>
+					<a href="/#">
+						<span class="avatar"><img src="/assets/images/avatar-5.jpg" alt=""></span>
 						<span class="name">Denise Peterson</span>
 						<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span>
@@ -299,7 +295,7 @@
 				</li>
 			</ul>
 			<!-- /.notice-list -->
-			<a href="#" class="notice-read-more">See more messages <i class="fa fa-angle-down"></i></a>
+			<a href="/#" class="notice-read-more">See more messages <i class="fa fa-angle-down"></i></a>
 		</div>
 		<!-- /.content -->
 	</div>
@@ -314,85 +310,53 @@
 	<!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-		<script src="assets/script/html5shiv.min.js"></script>
-		<script src="assets/script/respond.min.js"></script>
+		<script src="/assets/script/html5shiv.min.js"></script>
+		<script src="/assets/script/respond.min.js"></script>
 	<![endif]-->
 	<!--
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="assets/scripts/jquery.min.js"></script>
-	<script src="assets/scripts/modernizr.min.js"></script>
-	<script src="assets/plugin/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="assets/plugin/nprogress/nprogress.js"></script>
-	<script src="assets/plugin/sweet-alert/sweetalert.min.js"></script>
-	<script src="assets/plugin/waves/waves.min.js"></script>
+	<script src="/assets/scripts/jquery.min.js"></script>
+	<script src="/assets/scripts/modernizr.min.js"></script>
+	<script src="/assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="/assets/plugin/nprogress/nprogress.js"></script>
+	<script src="/assets/plugin/sweet-alert/sweetalert.min.js"></script>
+	<script src="/assets/plugin/waves/waves.min.js"></script>
 
 	<!-- Morris Chart -->
-	<script src="assets/plugin/chart/morris/morris.min.js"></script>
-	<script src="assets/plugin/chart/morris/raphael-min.js"></script>
-	<script src="assets/scripts/chart.morris.black.init.min.js"></script>
+	<script src="/assets/plugin/chart/morris/morris.min.js"></script>
+	<script src="/assets/plugin/chart/morris/raphael-min.js"></script>
+	<script src="/assets/scripts/chart.morris.black.init.min.js"></script>
 
 	<!-- Flot Chart -->
-	<script src="assets/plugin/chart/plot/jquery.flot.min.js"></script>
-	<script src="assets/plugin/chart/plot/jquery.flot.tooltip.min.js"></script>
-	<script src="assets/plugin/chart/plot/jquery.flot.categories.min.js"></script>
-	<script src="assets/plugin/chart/plot/jquery.flot.pie.min.js"></script>
-	<script src="assets/plugin/chart/plot/jquery.flot.stack.min.js"></script>
-	<script src="assets/scripts/chart.flot.black.init.min.js"></script>
+	<script src="/assets/plugin/chart/plot/jquery.flot.min.js"></script>
+	<script src="/assets/plugin/chart/plot/jquery.flot.tooltip.min.js"></script>
+	<script src="/assets/plugin/chart/plot/jquery.flot.categories.min.js"></script>
+	<script src="/assets/plugin/chart/plot/jquery.flot.pie.min.js"></script>
+	<script src="/assets/plugin/chart/plot/jquery.flot.stack.min.js"></script>
+	<script src="/assets/scripts/chart.flot.black.init.min.js"></script>
 
 	<!-- Sparkline Chart -->
-	<script src="assets/plugin/chart/sparkline/jquery.sparkline.min.js"></script>
-	<script src="assets/scripts/chart.sparkline.init.min.js"></script>
+	<script src="/assets/plugin/chart/sparkline/jquery.sparkline.min.js"></script>
+	<script src="/assets/scripts/chart.sparkline.init.min.js"></script>
 
 	<!-- FullCalendar -->
-	<script src="assets/plugin/moment/moment.js"></script>
-	<script src="assets/plugin/fullcalendar/fullcalendar.min.js"></script>
-	<script src="assets/scripts/fullcalendar.init.js"></script>
+	<script src="/assets/plugin/moment/moment.js"></script>
+	<script src="/assets/plugin/fullcalendar/fullcalendar.min.js"></script>
+	<script src="/assets/scripts/fullcalendar.init.js"></script>
 
-	<script src="assets/scripts/main.min.js"></script>
-	<script src="./train-4.js"></script>
+	<script src="/assets/scripts/main.min.js"></script>
+	<script src="/透视训练/六条边画立方体.js"></script>
 	<script type="text/javascript">
-		var User = {
-			template: '<h1>User</h1>',
-		};
-		var Register = {
-			template: '<h1>Register</h1>',
-		};
-
-		var router = new VueRouter({
-			// routes是路由规则数组
-			routes: [
-				// 每个路由规则都是一个配置对象,其中至少包含path和component两个属性
-				// path表示当前路由规则匹配的hash地址
-				// component表示当前路由规则对应要展示的组件
-				{
-					path: '/user',
-					component: User, // 组件名称,不是字符串
-				},
-				{
-					path: '/register',
-					component: Register, // 组件名称,不是字符串
-				},
-				/* 其中,path表示需要被重定向的原地址,redirect表示将要被重定向到的新地址 */
-				{
-					path: '/',
-					redirect: '/user'
-				}
-			]
-		});
-		userVue = new Vue({
-			el: '.main-menu',
+		new Vue({
+			el: '.user',
 			data: {
-				user: {}
-			},
-			router: router,
-		})
-		var User = { template: '<h1>User</h1>' }
-		fetch('http://127.0.0.1:8000/getUserInfo?uid=1').then(function (data) {
-			return data.json()
-		}).then(function (data) {
-			userVue.user = data
+				user: {
+					name: "赵浩然",
+					level: "菜鸟入门"
+				}
+			}
 		})
 	</script>
 </body>
